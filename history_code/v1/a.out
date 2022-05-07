@@ -1,0 +1,21 @@
+IP (tos 0x0, ttl 64, id 55647, offset 0, flags [DF], proto TCP (6), length 60)
+    127.0.0.1.45754 > 127.0.0.1.80: Flags [S], cksum 0xfe30 (incorrect -> 0x9f97), seq 2387287363, win 65495, options [mss 65495,sackOK,TS val 1070731775 ecr 0,nop,wscale 7], length 0
+IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    127.0.0.1.80 > 127.0.0.1.45754: Flags [S.], cksum 0xfe30 (incorrect -> 0xfe8f), seq 4154677133, ack 2387287364, win 65483, options [mss 65495,sackOK,TS val 1070731775 ecr 1070731775,nop,wscale 7], length 0
+IP (tos 0x0, ttl 64, id 55648, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.45754 > 127.0.0.1.80: Flags [.], cksum 0xfe28 (incorrect -> 0x254c), ack 1, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 0
+IP (tos 0x0, ttl 64, id 55649, offset 0, flags [DF], proto TCP (6), length 55)
+    127.0.0.1.45754 > 127.0.0.1.80: Flags [P.], cksum 0xfe2b (incorrect -> 0x60de), seq 1:4, ack 1, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 3: HTTP
+IP (tos 0x0, ttl 64, id 64313, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.80 > 127.0.0.1.45754: Flags [.], cksum 0xfe28 (incorrect -> 0x2549), ack 4, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 0
+IP (tos 0x0, ttl 64, id 55650, offset 0, flags [DF], proto TCP (6), length 55)
+    127.0.0.1.45754 > 127.0.0.1.80: Flags [P.U], cksum 0xfe2b (incorrect -> 0xc0e8), seq 4:7, ack 1, win 512, urg 3, options [nop,nop,TS val 1070731775 ecr 1070731775], length 3: HTTP
+IP (tos 0x0, ttl 64, id 64314, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.80 > 127.0.0.1.45754: Flags [.], cksum 0xfe28 (incorrect -> 0x2546), ack 7, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 0
+IP (tos 0x0, ttl 64, id 55651, offset 0, flags [DF], proto TCP (6), length 55)
+    127.0.0.1.45754 > 127.0.0.1.80: Flags [P.], cksum 0xfe2b (incorrect -> 0x60d8), seq 7:10, ack 1, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 3: HTTP
+IP (tos 0x0, ttl 64, id 64315, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.80 > 127.0.0.1.45754: Flags [.], cksum 0xfe28 (incorrect -> 0x2543), ack 10, win 512, options [nop,nop,TS val 1070731775 ecr 1070731775], length 0
+IP (tos 0x0, ttl 64, id 64316, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.80 > 127.0.0.1.45754: Flags [R.], cksum 0xfe28 (incorrect -> 0x11b7), seq 1, ack 10, win 512, options [nop,nop,TS val 1070736775 ecr 1070731775], length 0
+
