@@ -5,8 +5,21 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 using namespace std;
+
+int set_nonblock(int fd) {
+/* 获取文件的旧状态标志*/	
+	int old_flag = fcntl(fd, F_GETFL);
+/* 设置非阻塞标志*/
+	int new_flag = old_flag | O_NONBLOCK;
+/* 设置新的文件描述副标志*/
+	fcntl(fd, F_SETFL, new_flag);
+/* 返回旧的文件描述符状态，以便恢复*/
+	return old_flag;
+}
 
 int main () {
 	struct sockaddr_in servaddr;
