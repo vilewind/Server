@@ -55,11 +55,11 @@ int main() {
 		} else if(fds[1].revents & POLLIN) {
 			memset(read_buf, '\0', sizeof(read_buf));
 			recv(fds[1].fd, read_buf, sizeof(read_buf)-1, 0);
-			cout << to_string(read_buf) << endl;
+			cout << string{read_buf} << endl;
 		}
 
-		if (fds[0].revents&EPOLLIN) {
-			ret = splice(0, nullptr, pip_fd[1], nullptr, 32768, SPLICE_F_MORE | SPLICE_F_MOVE);
+		if (fds[0].revents&POLLIN) {
+			ret = splice(0, nullptr, pipe_fd[1], nullptr, 32768, SPLICE_F_MORE | SPLICE_F_MOVE);
 			ret = splice(pipe_fd[0], nullptr, fd, nullptr, 32768, SPLICE_F_MORE | SPLICE_F_MOVE);
 		}
 	}
