@@ -26,11 +26,14 @@ int main() {
 
 	memset(&serv_addr, 0, sizeof(serv_addr));
 	serv_addr.sin_family = AF_INET;
-	serv_addr.sin_port = htons(77);
+	serv_addr.sin_port = htons(78);
 	if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) < 0)
 		throw std::runtime_error("Couldn't invert string to num");
 
 	int serv_fd = func_except(socket, "socket", AF_INET, SOCK_STREAM, 0);
+
+	int reuse_opt = 1;
+	int reuse_flag = func_except(setsockopt, "setsockopt", serv_fd, SOL_SOCKET, SO_REUSEADDR, &reuse_opt, sizeof(reuse_flag));
 
 	int bind_flag = func_except(bind, "bind", serv_fd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
 
